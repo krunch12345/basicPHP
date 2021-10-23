@@ -12,6 +12,7 @@ if ($id && is_numeric($id)) {
     $result = mysqli_query($link,  'SELECT * FROM images WHERE id =' . $id);
     $image = mysqli_fetch_assoc($result);
     if ($image) {
+        echo 'просмотров: ' . $image['viewed'];
         echo '<img src="' . '/task5' . $image['image_path'] . '">';
     } else {
         die("Can't find image with id = " . $id);
