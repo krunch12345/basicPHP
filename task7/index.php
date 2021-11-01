@@ -1,0 +1,35 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+}
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 7</title>
+</head>
+<body>
+<div>
+    <a href="cart.php">Cart</a>
+    <div>
+        <div>
+            <h3>List</h3>
+        </div>
+    </div>
+    <div>
+        <?php
+            require_once 'render-goods.php';
+        ?>
+    </div>
+
+</div>
+
+</body>
+</html>
